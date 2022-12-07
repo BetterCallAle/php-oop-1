@@ -16,7 +16,7 @@ class Movies {
     public $img_name;
     private $img_path;
 
-    function __construct($title, $year, $original_lang, $genre, $director, $actors, $img_name = "")
+    function __construct(String $title, Int $year, String $original_lang, Array $genre, Mixed $director, String $actors, String $img_name = "")
     {
         $this->title = $title;
         $this->year = $year;
