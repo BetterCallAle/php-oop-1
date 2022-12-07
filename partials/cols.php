@@ -24,19 +24,19 @@ foreach($movies as $movie){
 
                     <li class="mb-2">
                         Generi:
-                        <ul class="d-inline-block">
+                        <ul>
                             <?php foreach($movie->genres as $genre){?>
-                                <li class="d-inline-block me-1"><strong class="red"><?php echo $genre; ?></strong></li>    
+                                <li><strong class="red"><?php echo $genre; ?></strong></li>    
                             <?php } ?>
                         </ul>
                     </li>
 
                     <li class="mb-2">
                         Regia:
-                        <ul class="d-inline-block">
+                        <ul>
                             <?php if(is_array($movie->director)){
                                     foreach($movie->director as $director){?>
-                                        <li class="d-inline-block me-1"><strong class="red"><?php echo $director; ?></strong> </li>    
+                                        <li><strong class="red"><?php echo $director; ?></strong> </li>    
                                     <?php }
                                 } else { ?>
                                     <li><strong class="red"><?php echo $movie->director ?></strong></li>
@@ -46,9 +46,9 @@ foreach($movies as $movie){
 
                     <li class="mb-2">
                         Attori:
-                        <ul class="d-inline-block">
+                        <ul>
                             <?php foreach($movie->actors as $actor){?>
-                                    <li class="d-inline-block me-1"><strong class="red"><?php echo $actor->name; ?></strong></li>    
+                                    <li><strong class="red"><?php echo $actor->name; ?></strong></li>    
                             <?php } ?>
                         </ul>
                     </li>

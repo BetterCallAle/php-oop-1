@@ -29,6 +29,7 @@ ul{
     position: relative;
     border: 1px solid white;
     border-radius: 10px;
+    overflow-y: hidden;
 }
 
 .ms_card-img{
@@ -38,8 +39,10 @@ ul{
 }
 
 .ms_card-description{
+    height: 100%;
     padding: 2rem;
     position: absolute;
     top: 0;
     left: 0;
+    overflow-y: auto;
 }
