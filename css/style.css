@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+header{
+    background-color: rgb(45, 45, 45);
+}
+
+h1{
+    color: red;
+    margin-right: 1rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.red{
+    color: red;
+}
+
+.ms_card{
+    position: relative;
+}
+
+.ms_card-img{
+    height: 50vh;
+    overflow: hidden;
+    opacity: .1;
+}
+
+.ms_card-description{
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

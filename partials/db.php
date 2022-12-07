@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . "./Models/Movies.php";
-require_once __DIR__ . "./Models/Actors.php";
+require_once __DIR__ . "./../Models/Movies.php";
+require_once __DIR__ . "./../Models/Actors.php";
 
 //create a genre array
 $genres = ["drammatico", "commedia", "animazione", "fantastico", "fantascienza", "avventura", "noir", "thriller"];
@@ -21,9 +21,4 @@ $movies = [
     new Movies("Spider-Man Into The Spider-Verse", 2018, "en", [$genres[2], $genres[3], $genres[4], $genres[1], $genres[5]], ["Bob Persicatti", "Peter Ramsey", "Rodney Rothman"], [$actors[2], $actors[3]], "spider-man.jpg"),
     new Movies("Mulholland Drive", 2001, "en", [$genres[0], $genres[6], $genres[7]], "David Lynch", [$actors[4], $actors[5]])
 ];
-
-var_dump($movies);
-echo "-------";
-var_dump($actors);
-
 ?>

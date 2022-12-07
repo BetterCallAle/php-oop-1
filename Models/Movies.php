@@ -10,18 +10,18 @@ class Movies {
     public $title;
     public $year;
     public $original_lang;
-    public $genre;
+    public $genres;
     public $director;
     public $actors;
     public $img_name;
     private $img_path;
 
-    function __construct(String $title, Int $year, String $original_lang, Array $genre, Mixed $director, Array $actors, String $img_name = "image_not_avabile.png")
+    function __construct(String $title, Int $year, String $original_lang, Array $genres, Mixed $director, Array $actors, String $img_name = "image_not_available.png")
     {
         $this->title = $title;
         $this->year = $year;
         $this->original_lang = $original_lang;
-        $this->genre = $genre;
+        $this->genres = $genres;
         $this->director = $director;
         $this->actors = $actors;
         $this->img_name = $img_name;
