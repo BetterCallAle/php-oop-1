@@ -1,18 +1,29 @@
 <?php
 require_once __DIR__ . "./Models/Movies.php";
+require_once __DIR__ . "./Models/Actors.php";
 
-$genres = ["drammatico", "commedia", "animazione", "fantastico", "fantascienza", "avventura"];
+//create a genre array
+$genres = ["drammatico", "commedia", "animazione", "fantastico", "fantascienza", "avventura", "noir", "thriller"];
 
-$first_movie = new Movies("Forrest Gump", 1994, "en", [$genres[0], $genres[1]], "Robert Zamekis", "Tom Hanks", "forrest-gump.jpg");
-$first_movie->setImgPath();
-$first_movie->getImgPath();
+//create an array with Actors instances
+$actors = [
+    new Actors("Tom Hanks", "1956/07/09", "Concors", "Tom Hanks Biography"),
+    new Actors("Robin Gayle Wright", "1966/04/08", "Dallas"),
+    new Actors("Shameik Moore", "1995/05/04", "Atlanta"),
+    new Actors("Mark Jake Johnson Weinberger", "1978/05/28", "Evanston"),
+    new Actors("Naomi Ellen Watts", "1968/09/28", "Shoreham"),
+    new Actors("Laura Harring", "1964/03/03", "Los Mochis", "Laura Harring Biography")
+];
 
-$second_movie = new Movies("Spider-Man Into The Spider-Verse", 2018, "en", [$genres[2], $genres[3], $genres[4], $genres[1], $genres[5]], ["Bob Persicatti", "Peter Ramsey", "Rodney Rothman"], "Shameik Moore", "spider-man.jpg");
-$second_movie->setImgPath();
-$second_movie->getImgPath();
+//Create an array with Movies instances
+$movies = [
+    new Movies("Forrest Gump", 1994, "en", [$genres[0], $genres[1]], "Robert Zamekis", [$actors[0], $actors[1]], "forrest-gump.jpg"),
+    new Movies("Spider-Man Into The Spider-Verse", 2018, "en", [$genres[2], $genres[3], $genres[4], $genres[1], $genres[5]], ["Bob Persicatti", "Peter Ramsey", "Rodney Rothman"], [$actors[2], $actors[3]], "spider-man.jpg"),
+    new Movies("Mulholland Drive", 2001, "en", [$genres[0], $genres[6], $genres[7]], "David Lynch", [$actors[4], $actors[5]])
+];
 
-var_dump($first_movie);
-echo "-----------";
-var_dump($second_movie);
+var_dump($movies);
+echo "-------";
+var_dump($actors);
 
 ?>
